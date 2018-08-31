@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "BERNIERRegular-Regular";
+  src: url('../fonts/bernier/BERNIERRegular-Regular.otf') format(opentype);
+  font-weight: normal;
+  font-style: normal;
+ }
+ @font-face {
+   font-family: "Monthoers";
+   src: url('../fonts/swistblnk_monthoers/Monthoers.otf') format(opentype);
+   font-weight: normal;
+   font-style: normal;
+  }

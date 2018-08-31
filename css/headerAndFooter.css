@@ -1,0 +1,210 @@
+.homeHeader {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  background: linear-gradient(to bottom, rgba(147, 25, 20, 1), rgba(223, 102, 97, 1), rgba(96, 16, 13, 1));
+  box-shadow: 0 15px 5px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+.headLogo {
+  order: 1;
+  flex-basis: 400px;
+  height: 120px;
+  background: url('../images/logo_gm.png') 10% 50% no-repeat;
+  background-size: 25%;
+}
+.headLogo > a {
+  display: block;
+  height: 100%;
+  font-family: "BERNIERRegular-regular";
+  text-decoration: none;
+  color: #fff;
+  font-size: 32px;
+  padding: 10% 0% 10% 40%;
+  box-sizing: border-box;
+}
+.headLogo > a:hover {
+  text-shadow: rgba(0, 0, 0, 1) 0px 0px 5px;
+}
+.headLogo:hover {
+  background-size: 26%;
+}
+
+.homeHeader nav {
+  flex-basis: 620px;
+  display: table;
+  flex-direction: row;
+  order: 2;
+  justify-content: center;
+}
+
+.menuItem {
+  font-family: 'BERNIERRegular-regular';
+  height: 120px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  text-shadow: rgba(0, 0, 0, 1) 0px 0px 5px;
+}
+.menuItem:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: rgba(0, 0, 0, 1) 0px 0px 5px 5px;
+
+}
+/**** Header's end ****/
+/**** Hiden menu *****/
+.hiddenMenu {
+  position: sticky;
+  width: 100%;
+  background: linear-gradient(to bottom, firebrick, maroon, firebrick);
+  cursor: pointer;
+  border-bottom: 3px solid rgba(119, 26, 24, 1);
+  display: none;
+}
+.hiddenMenu img {
+display: block;
+margin: 0 auto;
+padding: 5px 40px;
+
+}
+.hiddenMenu:hover {
+  background: linear-gradient(to bottom, firebrick, maroon, darkred);
+}
+.hiddenMenu nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hiddenMenu > div {
+  display: none;
+}
+.hiddenMenu nav .menuItem {
+  font-size: 16px;
+  margin: 15px 15px 0;
+  height: 50px;
+  display: inline-flex;
+}
+.hiddenMenuCondition {
+  display: block;
+}
+/*** Hiden menu's end ***/
+
+/**** Footer ****/
+footer {
+  display: flex;
+  width: 100%;
+  background: url('../images/grey-background.jpg');
+  background-size: content;
+  box-shadow: 0 15px 5px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  justify-content: center;
+  border-top: 4px solid rgba(255, 255, 255, 0.5);
+  flex-wrap: wrap;
+}
+footer img {
+  width: 100px;
+  height: 100px;
+  padding: 10px 20px;
+  display: block;
+}
+footer nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 10px 0;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  border-right: 3px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 15px 15px;
+}
+
+footer nav a {
+  font-family: 'BERNIERRegular-regular';
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  color: darkcyan;
+
+
+}
+footer nav a:hover {
+  color: white;
+  text-shadow: black 0px 0px 3px 3px;
+}
+.footerItem {
+  margin: 25px 10px;
+  padding: 20px 10px;
+}
+.contacts {
+  list-style-type: none;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+}
+.contacts a {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Monthoers";
+  display: list-item;
+  padding-left: 30px;
+  padding-right: 20px;
+  color: cyan;
+}
+#tel::before {
+  content: url('../images/icons/smartphone.png');
+  vertical-align: -0.2rem;
+  margin-right: 10px;
+}
+#vk::before {
+  content: url('../images/icons/vk.png');
+  vertical-align: -0.2rem;
+  margin-right: 10px;
+}
+#yT::before {
+  content: url('../images/icons/youtube.png');
+  vertical-align: -0.2rem;
+  margin-right: 10px;
+}
+#instagram::before {
+  content: url('../images/icons/instagram.png');
+  vertical-align: -0.2rem;
+  margin-right: 10px;
+}
+
+
+@media all and (max-width: 861px) {
+  footer nav {
+    display: none;
+  }
+  .contacts {
+    margin: 0 auto;
+    justify-content: center;
+    padding: 20px 30px;
+  }
+  footer  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+      .homeHeader nav {
+        display: none;
+      }
+      .hiddenMenu {
+        display: block;
+    }
+
+
+}

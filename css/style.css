@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html {
+  background: linear-gradient(to right, rgba(147, 25, 20, 1), rgba(223, 50, 50, 1), rgba(96, 16, 13, 1));
+}
+/********************************************************************* Landing*/
+.page {
+  background: url('../images/black_background.jpg') no-repeat;
+  background-size: cover;
+  font-family: 'BERNIERRegular-Regular';
+}
+/*Header*/
+ #welcome {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 64px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 1) 0px 5px 5px;
+  padding: 35px 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 15px 5px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, rgba(147, 25, 20, 1), rgba(223, 102, 97, 1), rgba(96, 16, 13, 1));
+ }
+/*Enter Button*/
+#enterGuild {
+  font-family: 'BERNIERRegular-Regular';
+  width: 300px;
+  height: 300px;
+  font-size: 32px;
+  border-radius: 400px;
+  background: linear-gradient(to top, rgba(147, 25, 20, 1), rgba(223, 50, 50, 1), rgba(96, 16, 13, 1));
+  color: white;
+  text-shadow: rgba(0, 0, 0, 1) 0px 5px 5px;
+  opacity: 0.1;
+}
+#enterGuildLink {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+
+}
+#enterGuild:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+/*SLIDER*/
+.smallImgMenu {
+  width: 100vw;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.small {
+  width: 325px;
+  height: 208px;
+  display: inline-block;
+  padding: 10px 0;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 10px;
+
+}
+.popUpBox {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.popUp {
+  position: fixed;
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  z-index: 1;
+  display: none;
+}
+.popUp img {
+  width: 100%;
+}
+#popUpImage{
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 5px 60px 40px rgba(10, 0, 10, 0.6);
+}
+.controls {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.close {
+  width: 36px;
+  height: 36px;
+  background: grey;
+  position: absolute;
+  top: 0%;
+  right: -40px;
+  cursor: pointer;
+}
+.popUp:hover .close{
+opacity: 0.2;
+}
+.prev {
+  width: 10%;
+  height: 99.5%;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  visibility: hidden;
+  cursor: pointer;
+}
+.popUp:hover .prev {
+  visibility: visible;
+}
+.next {
+  width: 10%;
+  height: 99.5%;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  visibility: hidden;
+  cursor: pointer;
+}
+.popUp:hover .next {
+  visibility: visible;
+}
+.prev img {
+  position: absolute;
+  top: 40%;
+  left: -10%;
+}
+.next img {
+  position: absolute;
+  top: 40%;
+  right: -10%;
+}
+@media all and (max-width: 931px) and (min-width: 321px) {
+  #enterGuild {
+    right: 5%;
+    bottom: 5%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#enterGuildLink {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  top: auto;
+  left: auto;
+}
+}
+/***************************************************************** Landing end*/
+/***************************************************************** Home********/
+/**** Guild info ****/
+.guildInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.infoBlock {
+  flex-basis: 300px;
+  margin: 5% 2%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px 10px;
+  opacity: 0.9;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+}
+.infoBlock > h3 {
+  font-size: 28px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6)
+}
+.infoBlock > hr{
+  height: 5px;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+.infoBlock > img {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 10% 0 5%;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
+}
+.infoBlock > p {
+  font-size: 18px;
+  text-align: justify;
+  text-indent: 1.5em;
+  width: 90%;
+  margin: 0 auto 20px;
+  font-family: 'Monthoers';
+  color: rgba(255, 255, 255, 0.6)
+}
+.activeInfoBlock {
+  overflow-y: scroll;
+  position: fixed;
+  top: -1%;
+  margin: 0;
+  padding: 2% 25%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 80;
+  background: black;
+  opacity: 1;
+}
+/**** Guild info end ****/
+
+
+/********** GAME RULES ********/
+.rules {
+  display: flex;
+  flex-direction: row;
+}
+.rulesMenu {
+  background: black;
+  width: 320px;
+  overflow: scroll;
+  height: 82.5vh;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.rulesMenu:hover {
+  background: linear-gradient(to right, black, midnightblue, black );
+}
+.rulesMenu ul {
+  list-style-type: none;
+  margin-left: 20px;
+}
+.rulesMenu > ul > li {
+  margin: 20px 0;
+}
+.rulesMenu > ul > li > a:hover {
+  text-shadow: 0 2px 2px white;
+}
+.rulesMenu > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+.rulesMenu > ul > li > ul > li  {
+  padding: 10px;
+}
+.rulesMenu > ul > li > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+.rulesMenu > ul > li > ul > li > a:hover {
+  text-shadow: 0 2px 2px white;
+}
+.rulesText {
+  background: url('../images/black_background.jpg');
+  color: white;
+  width: 80vw;
+  height: 82.5vh;
+  overflow: scroll;
+}
+.rulesText h2 {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.rulesText h3 {
+  margin-top: 30px;
+  text-indent: 1rem;
+  text-decoration: underline;
+  text-align: center;
+}
+.rulesText h4 {
+  text-align: center;
+  text-indent: 2rem;
+  text-decoration: underline;
+}
+.rulesText p {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  text-align: justify;
+}
+/** GAME RULES | END **/
+
+/* History of mafia */
+.history {
+  width: 80%;
+  margin: 0 auto;
+  background: url('../images/oldPaper.jpg') -650px -250px repeat;
+
+}
+.history h2 {
+  text-align: center;
+  padding: 30px 0;
+}
+.history p {
+  padding: 0px 50px;
+  font-size: 26px;
+  font-family: "Monthoers";
+  text-align: justify;
+  text-indent: 1.5em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 3px 2px;
+}
+.history p:first-child {
+  padding-top: 20px;
+}
+.history p:last-child {
+  padding-bottom: 20px;
+}
+/* History of mafia | END */
+
+
+/* Coaches */
+.coachPage {
+  display: grid;
+
+}
+.coachBlock {
+  background: linear-gradient(to right, #1F1C18, #8E0E00, #1F1C18);
+  border: 5px solid black;
+  box-shadow: black 0 10px 0px;
+
+}
+.coachImg {
+  box-shadow: black 0 0 40px;
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+}
+.coachImgActive {
+  display: block;
+  animation-name: showCoach;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes showCoach {
+  from {height: 0;}
+  10% {height: 100px;}
+  20% {height: 200px;}
+  30% {height: 300px;}
+  40% {height: 400px;}
+  50% {height: 500px;}
+  60% {height: 600px;}
+  70% {height: 700px;}
+  80% {height: 800px;}
+  90% {height: 900px;}
+  to {height: 900px;}
+  }
+.coachImg p {
+  font-family: "BERNIERRegular-regular";
+  font-size: 24px;
+  color: darkcyan;
+  text-align: center;
+  line-height: 3rem;
+  padding: 5%;
+}
+.coach h2 {
+  text-align: center;
+  padding: 5vh 0;
+  font-family: "BERNIERRegular-regular";
+  font-size: 52px;
+  text-shadow: black 0px 5px 10px;
+  cursor: pointer;
+
+}
+.coachBlock:nth-child(1) .coach .coachImg {
+  height: 900px;
+  background: url('../images/coaches/arhi.jpg') 50% 50%;
+  background-size: cover;
+}
+.coachBlock:nth-child(2) .coach .coachImg {
+  height: 900px;
+  background: url('../images/coaches/aliot.jpg') 60% 50%;
+  background-size: cover;
+}
+.coachBlock:nth-child(3) .coach .coachImg {
+  height: 900px;
+  background: url('../images/coaches/remedy.jpg') 60% 50%;
+  background-size: cover;
+}
+.coachBlock:nth-child(4) .coach .coachImg {
+  height: 900px;
+  background: url('../images/coaches/avrora.jpg') 50% 50%;
+  background-size: cover;
+}
+.coachBlock:nth-child(5) .coach .coachImg {
+  height: 900px;
+  background: url('../images/coaches/voron.jpg') 50% 50%;
+  background-size: cover;
+}
+.
+
+
+
+/*Coaches | END */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ADAPT*/
+@media all and (max-width: 471px) {
+
+/* Landing*/
+
+  #enterGuild {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#enterGuildLink {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  top: auto;
+  left: auto;
+}
+.popUp {
+  top: 50%;
+}
+.coachImg p {
+  font-size: 16px;
+}
+}
+/* Landing end*/
+@media all and (max-width: 861px) {
+
+  /* Game rules */
+  .rulesMenu {
+    display: none;
+
+  }
+  .rulesText {
+    width: auto;
+  }
+  .coachImg p {
+    font-size: 20px;
+  }
+
+}
