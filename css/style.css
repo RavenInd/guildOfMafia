@@ -149,7 +149,7 @@ opacity: 0.2;
   top: 40%;
   right: -10%;
 }
-@media all and (max-width: 931px) and (min-width: 321px) {
+@media all and (max-width: 931px) {
   #enterGuild {
     right: 5%;
     bottom: 5%;
